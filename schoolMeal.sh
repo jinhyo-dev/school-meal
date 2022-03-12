@@ -6,7 +6,7 @@ from datetime import datetime
 import requests
 currentTime = datetime.now().hour
 bool = True
-print('학교이름을 세글자 이상 입력하여주세요.')
+print('학교 이름을 세 글자 이상 입력하여 주세요.')
 
 while True:
   schoolName = input()
