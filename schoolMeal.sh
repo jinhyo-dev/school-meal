@@ -34,7 +34,7 @@ while True:
         break
       else:
         print(f'오늘의 {time} 메뉴입니다.')
-        print(food)
+        print(*food, sep='\n')
         break
     except:
       print('학교명을 다시 확인해주세요.')
