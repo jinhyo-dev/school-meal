@@ -28,12 +28,13 @@ while True:
   if bool == True:
     try:
       html = requests.get(f'http://밥.서버.한국/{schoolName}')
+      schoolName = html.json()['status']['searched_school']
       food = html.json()[menu]
       if food == None:
-        print(f'오늘 {time}의 급식 정보가 없습니다.')
+        print(f'{schoolName}의 오늘 {time} 정보가 없습니다.')
         break
       else:
-        print(f'오늘의 {time} 메뉴입니다.')
+        print(f'{schoolName}의 오늘 {time} 메뉴입니다.')
         for i in food:
           tmp = i
           tmp = tmp.replace('*', '')
