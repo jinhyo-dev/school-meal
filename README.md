@@ -1,5 +1,5 @@
 # SCHOOL MEAL
-이 코드는 "https://github.com/siwonKH/school-menu-API" 위 API를 사용하여 만들었습니다.
+이 코드는 "https://github.com/siwonKH/school-menu-API" API를 사용하여 만들었습니다.
 
 ## About
 파이썬과 쉘 스크립트를 이용하여 사용자가 학교명을 입력하면 현재 시간에 따라 아침/점심/저녁 중 하나의 메뉴를 출력한다.
