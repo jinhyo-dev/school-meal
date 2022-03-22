@@ -14,7 +14,7 @@ while True:
   if currentTime >= 0 and currentTime <= 9:
     menu = "breakfast"
     time = '아침'
-  elif currentTime >= 10 and currentTime <= 12:
+  elif currentTime >= 10 and currentTime <= 13:
     menu = "lunch"
     time = '점심'
   elif currentTime >= 14 and currentTime <= 20:
@@ -27,14 +27,18 @@ while True:
 
   if bool == True:
     try:
-      html = requests.get(f'https://scmeal.ml/{schoolName}')
+      html = requests.get(f'http://밥.서버.한국/{schoolName}')
       food = html.json()[menu]
       if food == None:
         print(f'오늘 {time}의 급식 정보가 없습니다.')
         break
       else:
         print(f'오늘의 {time} 메뉴입니다.')
-        print(*food, sep='\n')
+        for i in food:
+          tmp = i
+          tmp = tmp.replace('*', '')
+          tmp = tmp.replace('s', '')
+          print(tmp)
         break
     except:
       print('학교명을 다시 확인해주세요.')
